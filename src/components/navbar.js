@@ -10,7 +10,7 @@ function navbar() {
                 Agrinnovate 
             </link>
             <div className='menu-icon'>
-               <i className='{click? }'>hamburger</> 
+               <i class="fa-solid fa-bars"></i>
             </div>
         </div>  
     </nav>
