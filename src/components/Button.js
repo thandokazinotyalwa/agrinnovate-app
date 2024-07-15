@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import './Button.css';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ export const Button = ({
     ? buttonStyle 
     : STYLES[0];
 
-    const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
+    const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
     return (
         <Link to='/sign-up' className='btn-mobile'>
