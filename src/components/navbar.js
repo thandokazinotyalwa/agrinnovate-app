@@ -1,7 +1,12 @@
+import { click } from '@testing-library/user-event/dist/click'
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 
-function navbar() {
+function Navbar() {
+  const[click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
     <>
     <nav className='navbar-container'>
@@ -9,8 +14,8 @@ function navbar() {
             <link to='/' className='navbar-logo'>
                 Agrinnovate 
             </link>
-            <div className='menu-icon'>
-               <i class="fa-solid fa-bars"></i>
+            <div className='menu-icon' onClick={handleClick}>
+               <i className={click ? 'fas fa-times' : 'fa-solid fa-bars'}></i>
             </div>
         </div>  
     </nav>
@@ -18,4 +23,4 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Navbar;
