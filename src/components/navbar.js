@@ -30,7 +30,7 @@ function Navbar() {
     
 
   return (
-    <nav className='navbar-container'>
+    <nav className='navbar'>
       <div className='navbar-container'>
         <Link to='/' className='navbar-logo'>
           AGRINNOVATE
@@ -55,7 +55,7 @@ function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
               Sign-up
             </Link>
           </li>
