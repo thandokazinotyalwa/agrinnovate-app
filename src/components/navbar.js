@@ -22,7 +22,7 @@ function Navbar() {
     showButton();
     window.addEventListener("resize", showButton);
 
-    return () => window.addEventListener("resize", showButton);
+    return () => window.removeEventListener("resize", showButton);
   }, []);
 
   return (
@@ -46,6 +46,11 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
+              ChatRoom
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link
               to="/opportunities"
               className="nav-links"
@@ -53,14 +58,30 @@ function Navbar() {
             >
               Opportunities
             </Link>
+            <ul className="dropdown-menu">
+              <li>
+                <Link
+                  to="/funding"
+                  className="dropdown-links"
+                  onClick={closeMobileMenu}
+                >
+                  Funding
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/job"
+                  className="dropdown-links"
+                  onClick={closeMobileMenu}
+                >
+                  Job
+                </Link>
+              </li>
+            </ul>
           </li>
           <li className="nav-item">
-            <Link
-              to="/sign-up"
-              className="nav-links-mobile"
-              onClick={closeMobileMenu}
-            >
-              Sign-up
+            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+              Log In
             </Link>
           </li>
         </ul>

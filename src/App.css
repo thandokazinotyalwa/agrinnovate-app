@@ -8,12 +8,14 @@
 .home,
 .about,
 .opportunities,
-.sign-up {
+.sign-up .login {
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+}
+.login {
 }
 .about {
   background-image: url("/public/images/img-2.jpg");
@@ -39,4 +41,40 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+
+.chat-room {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.message {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.message-input-form {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.message-input-form input {
+  flex: 1;
+  padding: 5px;
+}
+
+.message-input-form button {
+  padding: 5px 10px;
 }
