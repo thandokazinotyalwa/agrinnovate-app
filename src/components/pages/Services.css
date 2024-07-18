@@ -1,0 +1,163 @@
+.map-container {
+  margin: 50px 50px 50px 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Adds space between the left and right columns */
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+}
+
+.filter-buttons {
+  margin-bottom: 10px;
+  text-align: center; /* Centers the buttons horizontally */
+}
+
+.filter-buttons button {
+  margin-right: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none; /* Remove default border */
+  border-radius: 5px;
+  color: #fff; /* Text color */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.filter-buttons .btn-primary {
+  background-color: #007bff; /* Blue */
+}
+
+.filter-buttons .btn-success {
+  background-color: #28a745; /* Green */
+}
+
+.filter-buttons .btn-warning {
+  background-color: #ffc107; /* Yellow */
+}
+
+.filter-buttons .btn-info {
+  background-color: #17a2b8; /* Teal */
+}
+
+.filter-buttons .btn-danger {
+  background-color: #dc3545; /* Red */
+}
+
+.filter-buttons button:hover {
+  opacity: 0.9; /* Slightly darker on hover for better visual feedback */
+}
+
+.right-column {
+  padding-left: 30px; /* Adds space between the columns */
+}
+
+.right-column h2 {
+  font-size: 30px; /* Adjust the font size for the heading */
+  margin-top: 15px;
+  margin-bottom: 5px; /* Adds space between the heading and the content */
+  text-align: center;
+}
+
+.right-column ul {
+  list-style: none;
+  padding: 80px;
+}
+
+.right-column li {
+  margin-bottom: 20px; /* Adds space between list items */
+}
+
+.right-column p {
+  font-size: 16px; /* Adjust font size for the summary text */
+  margin: 0; /* Removes default margin */
+}
+.left-column h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.left-column p {
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .map-container {
+    flex-direction: column; /* Stack columns vertically on tablets */
+    gap: 10px;
+  }
+
+  .left-column,
+  .right-column {
+    padding: 10px;
+  }
+
+  .map {
+    height: 400px; /* Adjust map height for smaller screens */
+  }
+
+  .filter-buttons {
+    margin-bottom: 15px;
+  }
+
+  .filter-buttons button {
+    margin-right: 5px;
+    font-size: 12px;
+  }
+
+  .right-column h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .right-column p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    margin: 20px; /* Reduce margin on mobile */
+    flex-direction: column; /* Stack columns vertically on mobile */
+    gap: 20px;
+  }
+
+  .left-column,
+  .right-column {
+    padding: 5px;
+  }
+
+  .map {
+    height: 300px; /* Adjust map height for mobile screens */
+  }
+
+  .filter-buttons {
+    margin-bottom: 15px;
+  }
+
+  .filter-buttons button {
+    margin-right: 5px;
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .right-column h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .right-column p {
+    font-size: 15px;
+  }
+}
