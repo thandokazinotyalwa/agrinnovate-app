@@ -10,30 +10,30 @@ function Cards() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="images/img-8.jpg"
+              src="/images/img-8.jpg"
               text="Explore the hidden waterfall deep inside the amazon jungle "
               label="Adventure"
-              path="/services"
+              path="/opportunities"
             />
             <CardItem
-              src="images/img-3.jpg"
+              src="/images/img3.jpeg"
               text="Explore the hidden waterfall deep inside the amazon jungle "
               label="Adventure"
-              path="/services"
+              path="/opportunities"
             />
           </ul>
           <ul className="cards__items">
             <CardItem
-              src="images/img-8.jpg"
+              src="/images/img-8.jpg"
               text="Explore the hidden waterfall deep inside the amazon jungle "
               label="Adventure"
-              path="/services"
+              path="/opportunities"
             />
             <CardItem
-              src="images/img-3.jpg"
+              src="/images/img3.jpeg"
               text="Explore the hidden waterfall deep inside the amazon jungle "
               label="Adventure"
-              path="/services"
+              path="/opportunities"
             />
           </ul>
         </div>
