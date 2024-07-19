@@ -28,8 +28,8 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          AGRINNOVATE
+        <Link to="/" className="navbar-logo">
+          <img src="/images/Logo.png" alt="Logo" className="logo-image" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fa-solid fa-bars"}></i>
@@ -46,20 +46,14 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/courses" className="nav-links" onClick={closeMobileMenu}>
-              Courses
+            <Link to="/learn" className="nav-links" onClick={closeMobileMenu}>
+              Learn
             </Link>
-            <ul className="dropdown-menu">
-              <li>
-                <Link
-                  to="/chat"
-                  className="dropdown-links"
-                  onClick={closeMobileMenu}
-                >
-                  ChatRoom
-                </Link>
-              </li>
-            </ul>
+          </li>
+          <li className="nav-item">
+            <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
+              ChatRoom
+            </Link>
           </li>
           <li className="nav-item">
             <Link
