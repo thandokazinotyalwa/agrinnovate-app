@@ -28,8 +28,8 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          <img src="/images/Logo.png" alt="Logo" className="logo-image" />
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+          <img src="/images/Logo.jpg" alt="Logo" className="logo-image" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fa-solid fa-bars"}></i>
@@ -89,8 +89,16 @@ function Navbar() {
               Log In
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/signup"
+              className="nav-links btn--outline"
+              onClick={closeMobileMenu}
+            >
+              SIGN UP
+            </Link>
+          </li>
         </ul>
-        {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
       </div>
     </nav>
   );

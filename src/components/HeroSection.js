@@ -39,7 +39,7 @@ function HeroSection() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-image"
-            src="/images/img5.jpeg"
+            src="/images/img7.png"
             alt="Third slide"
           />
           <Carousel.Caption className="carousel-caption">
