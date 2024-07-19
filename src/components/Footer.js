@@ -1,57 +1,48 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Button from "./Button";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css'; // Make sure to create a corresponding CSS file for styling
 
-function Footer() {
+const Footer = () => {
   return (
-    <div className="footer-container">
-      <section className="footer-subscription">
-        <p className="footer-subscription-heading">
-          Join the Harvest horizon newsletter to receive our best course deals
-        </p>
-        <p className="footer-subscription-text">
-          You can Unsubscribe at any time
-        </p>
-        <div className="input-areas">
-          <form>
-            <input
-              type="email"
-              name="email"
-              placeholder="Your email"
-              className="footer-input"
-            />
-            <Button buttonStyle="btn--outline">Subscribe</Button>
-          </form>
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="contact-info">
+          <h4>Contact Us</h4>
+          <p>123 AgriInnovate Lane, Cape Town, South Africa</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: contact@agriinnovate.com</p>
         </div>
-      </section>
-
-      <div className="footer-links">
-        <div className="footer-link-wrapper">
-          <div className="footer-link-items">
-            <h2>About Us</h2>
-            <Link to="/how-it-works" className="footer-link">
-              How it works
-            </Link>
-            <Link to="/testimonials" className="footer-link">
-              Testimonials
-            </Link>
-            <Link to="/careers" className="footer-link">
-              Careers
-            </Link>
-            <Link to="/investors" className="footer-link">
-              Investors
-            </Link>
-            <Link to="/terms-of-services" className="footer-link">
-              Terms of Services
-            </Link>
-          </div>
-
-          {/* Repeat the structure for other sections if needed */}
+        <div className="quick-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div className="social-media">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/agriinnovate" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://twitter.com/agriinnovate" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/company/agriinnovate" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/agriinnovate" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.youtube.com/agriinnovate" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+      <div className="legal-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/disclaimer">Disclaimer</a>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; 2024 AgriInnovate. All rights reserved.</p>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
