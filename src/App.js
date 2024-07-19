@@ -8,6 +8,8 @@ import Learn from "./components/pages/Learn";
 import SignUp from "./components/pages/SignUp";
 import LogIn from "./components/pages/LogIn";
 import ChatRoom from "./components/pages/ChatRoom";
+import Courses from "./components/pages/Courses";
+import CourseDetailPage from "./components/pages/CourseDetailPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/chat" element={<ChatRoom />} />
+          <Route path="/agriculture-course" element={<Courses />} />
+          <Route path="/course/:id" element={<CourseDetailPage />} />
         </Routes>
       </Router>
     </>

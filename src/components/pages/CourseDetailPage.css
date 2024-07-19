@@ -1,0 +1,11 @@
+.course-detail {
+  padding: 20px;
+}
+
+.course-detail h1 {
+  margin: 0;
+}
+
+.course-detail p {
+  font-size: 1.2rem;
+}
