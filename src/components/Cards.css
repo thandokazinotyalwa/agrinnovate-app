@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 20px; /* Add padding for spacing */
 }
 
 .heading {
@@ -18,6 +18,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  max-width: 1200px; /* Maximum width for the container */
 }
 
 .card {
@@ -29,6 +30,8 @@
   transition: transform 0.3s;
   margin: 10px;
   position: relative;
+  flex: 1 1 calc(25% - 40px); /* Ensure the cards take up 25% of the container width with a margin */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .card:hover {
