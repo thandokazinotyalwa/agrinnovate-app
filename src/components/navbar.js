@@ -28,7 +28,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           AGRINNOVATE
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -46,9 +46,20 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
-              ChatRoom
+            <Link to="/courses" className="nav-links" onClick={closeMobileMenu}>
+              Courses
             </Link>
+            <ul className="dropdown-menu">
+              <li>
+                <Link
+                  to="/chat"
+                  className="dropdown-links"
+                  onClick={closeMobileMenu}
+                >
+                  ChatRoom
+                </Link>
+              </li>
+            </ul>
           </li>
           <li className="nav-item">
             <Link

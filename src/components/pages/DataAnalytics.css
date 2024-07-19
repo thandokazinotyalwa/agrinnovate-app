@@ -1,0 +1,30 @@
+.data-analytics {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar > div {
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.completed {
+  background: #4caf50;
+}
+
+.in-progress {
+  background: #ff9800;
+}
+
+.not-started {
+  background: #f44336;
+}
