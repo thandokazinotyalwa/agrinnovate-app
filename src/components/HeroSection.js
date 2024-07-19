@@ -1,7 +1,7 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './HeroSection.css'; // Import your custom CSS
+import React from "react";
+import { Carousel } from "react-bootstrap"; // Import Carousel component from react-bootstrap
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "./HeroSection.css"; // Import your custom CSS
 
 function HeroSection() {
   return (
@@ -10,7 +10,7 @@ function HeroSection() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-image"
-            src="/images/img1.jpg" 
+            src="/images/img1.jpg"
             alt="First slide"
           />
           <Carousel.Caption className="carousel-caption">
@@ -25,7 +25,7 @@ function HeroSection() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-image"
-            src="/images/img6.jpg" 
+            src="/images/img6.jpg"
             alt="Second slide"
           />
           <Carousel.Caption className="carousel-caption">
@@ -39,7 +39,7 @@ function HeroSection() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-image"
-            src="/images/img5.jpeg" 
+            src="/images/img5.jpeg"
             alt="Third slide"
           />
           <Carousel.Caption className="carousel-caption">

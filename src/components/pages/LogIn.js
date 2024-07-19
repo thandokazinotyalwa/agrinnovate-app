@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./LogIn.css";
 
 function LogIn() {
@@ -19,6 +20,11 @@ function LogIn() {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Login submitted", formData);
+    // Optionally, you can reset the form here if needed
+    setFormData({
+      username: "",
+      password: "",
+    });
   };
 
   return (
@@ -47,10 +53,20 @@ function LogIn() {
             required
           />
         </div>
-        <div className="form-buttons">
+        <div className="form-group">
           <button type="submit" className="btn-login">
             Login
           </button>
+        </div>
+        <div className="form-group">
+          <Link to="/forgot-password" className="forgot-password">
+            Forgot Password?
+          </Link>
+        </div>
+        <div className="form-group">
+          <Link to="/sign-up" className="btn-signup">
+            Sign Up
+          </Link>
         </div>
       </form>
     </div>
