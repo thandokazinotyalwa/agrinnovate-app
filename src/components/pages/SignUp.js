@@ -8,20 +8,30 @@ function SignUp() {
     surname: "",
     phoneNumber: "",
     password: "",
+    agreeTerms: false,
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
+    const newValue = type === "checkbox" ? checked : value;
+
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: newValue,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Form submitted", formData);
+    setFormData({
+      username: "",
+      name: "",
+      surname: "",
+      phoneNumber: "",
+      password: "",
+      agreeTerms: false,
+    });
   };
 
   const handleCancel = () => {
@@ -31,6 +41,7 @@ function SignUp() {
       surname: "",
       phoneNumber: "",
       password: "",
+      agreeTerms: false,
     });
   };
 
@@ -46,6 +57,7 @@ function SignUp() {
             name="username"
             value={formData.username}
             onChange={handleChange}
+            className="form-control"
             required
           />
         </div>
@@ -57,6 +69,7 @@ function SignUp() {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            className="form-control"
             required
           />
         </div>
@@ -68,6 +81,7 @@ function SignUp() {
             name="surname"
             value={formData.surname}
             onChange={handleChange}
+            className="form-control"
             required
           />
         </div>
@@ -79,6 +93,7 @@ function SignUp() {
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
+            className="form-control"
             required
           />
         </div>
@@ -90,14 +105,33 @@ function SignUp() {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            className="form-control"
             required
           />
         </div>
+        <div className="form-group">
+          <input
+            type="checkbox"
+            id="agreeTerms"
+            name="agreeTerms"
+            checked={formData.agreeTerms}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="agreeTerms" className="terms-label">
+            I agree to the <a href="/privacy-policy">Privacy Policy</a> and{" "}
+            <a href="/terms-of-use">Terms of Use</a>
+          </label>
+        </div>
         <div className="form-buttons">
-          <button type="button" className="btn-cancel" onClick={handleCancel}>
+          <button
+            type="button"
+            className="btn btn-cancel"
+            onClick={handleCancel}
+          >
             Cancel
           </button>
-          <button type="submit" className="btn-signup">
+          <button type="submit" className="btn btn-signup">
             Sign Up
           </button>
         </div>
