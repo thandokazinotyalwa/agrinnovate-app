@@ -1,45 +1,53 @@
-import React from "react";
-import CardItem from "./CardItem";
-import "./Cards.css";
+import React from 'react';
+import './Cards.css';
 
-function Cards() {
+function App() {
+  const cards = [
+    {
+      image: 'https://via.placeholder.com/300',
+      title: 'Card 1',
+      info: 'More information about Card 1.',
+      summary: 'Summary of Card 1'
+    },
+    {
+      image: 'https://via.placeholder.com/300',
+      title: 'Card 2',
+      info: 'More information about Card 2.',
+      summary: 'Summary of Card 2'
+    },
+    {
+      image: 'https://via.placeholder.com/300',
+      title: 'Card 3',
+      info: 'More information about Card 3.',
+      summary: 'Summary of Card 3'
+    },
+    {
+      image: 'https://via.placeholder.com/300',
+      title: 'Card 4',
+      info: 'More information about Card 4.',
+      summary: 'Summary of Card 4'
+    },
+  ];
+
   return (
-    <div className="cards">
-      <h1>Check out these EPIC Destinations!</h1>
-      <div className="cards__container">
-        <div className="cards__wrapper">
-          <ul className="cards__items">
-            <CardItem
-              src="/images/img-8.jpg"
-              text="Explore the hidden waterfall deep inside the amazon jungle "
-              label="Adventure"
-              path="/opportunities"
-            />
-            <CardItem
-              src="/images/img3.jpeg"
-              text="Explore the hidden waterfall deep inside the amazon jungle "
-              label="Adventure"
-              path="/opportunities"
-            />
-          </ul>
-          <ul className="cards__items">
-            <CardItem
-              src="/images/img-8.jpg"
-              text="Explore the hidden waterfall deep inside the amazon jungle "
-              label="Adventure"
-              path="/opportunities"
-            />
-            <CardItem
-              src="/images/img3.jpeg"
-              text="Explore the hidden waterfall deep inside the amazon jungle "
-              label="Adventure"
-              path="/opportunities"
-            />
-          </ul>
-        </div>
+    <div className="App">
+      <h1 className="heading">What we offer</h1>
+      <div className="card-container">
+        {cards.map((card, index) => (
+          <div className="card" key={index}>
+            <img src={card.image} alt={card.title} className="card-image" />
+            <div className="card-summary">
+              <h2>{card.summary}</h2>
+            </div>
+            <div className="card-info">
+              <h2>{card.title}</h2>
+              <p>{card.info}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
-export default Cards;
+export default App;
