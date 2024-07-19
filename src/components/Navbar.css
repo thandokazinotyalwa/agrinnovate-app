@@ -2,7 +2,7 @@
 
 /* General Navbar styling */
 .navbar {
-  background: #333;
+  background: #faf7f7;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -23,19 +23,28 @@
   max-width: 1500px;
   padding: 0 24px;
 }
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 60px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
 .nav-links {
   margin-right: 16px; /* Adjust margin-right to create space */
-}
-.btn--outline {
-  margin-left: 15px; /* Adjust margin-left if needed */
-  margin-top: 1;
 }
 
 .nav-links,
 .navbar-logo {
-  color: #fff;
+  color: #010101;
   text-decoration: none;
 }
+
 .nav-item {
   position: relative; /* Ensure this is set */
   height: 80px;
@@ -93,6 +102,21 @@
 
 .nav-item:hover .dropdown-menu {
   display: block;
+}
+
+.btn--outline {
+  border: 1px solid #010101;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #010101;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn--outline:hover {
+  background: #010101;
+  color: #fff;
 }
 
 @media screen and (max-width: 960px) {
@@ -161,5 +185,10 @@
 
   .nav-item.active .dropdown-menu {
     display: block;
+  }
+
+  .btn--outline {
+    width: 100%;
+    text-align: center;
   }
 }
