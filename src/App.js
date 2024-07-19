@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
 import About from "./components/pages/About";
+import Learn from "./components/pages/Learn";
 import SignUp from "./components/pages/SignUp";
 import LogIn from "./components/pages/LogIn";
 import ChatRoom from "./components/pages/ChatRoom";
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/learn" element={<Learn />} />
           <Route path="/opportunities" element={<Services />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
