@@ -2,7 +2,7 @@
 .App {
   text-align: center;
   display: flex;
-  flex-direction: column; /* Align items vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -10,25 +10,25 @@
 
 .heading {
   font-size: 2.5rem;
-  margin-bottom: 20px; /* Space between heading and cards */
+  margin-bottom: 20px;
 }
 
 .card-container {
   display: flex;
-  flex-wrap: wrap; /* Ensures cards wrap properly */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adjusts the spacing between cards */
+  gap: 20px;
 }
 
 .card {
-  width: 300px; /* Ensures all cards have equal width */
-  height: 400px; /* Ensures all cards have equal height */
+  width: 300px;
+  height: 400px;
   overflow: hidden;
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: transform 0.3s;
-  margin: 10px; /* Adjusts the spacing around cards */
-  position: relative; /* To position summary and info correctly */
+  margin: 10px;
+  position: relative;
 }
 
 .card:hover {
@@ -37,18 +37,25 @@
 
 .card-image {
   width: 100%;
-  height: 70%; /* Adjusts the image height within the card */
+  height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .card-summary {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
   padding: 10px;
   position: absolute;
-  bottom: 30%; /* Adjust based on the card-info height */
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 1; /* To ensure it's above the image but below the card-info */
+  z-index: 1;
+  color: black;
+  text-align: center;
+  font-size: 1.2rem; /* Adjust as needed */
 }
 
 .card-info {
@@ -56,12 +63,15 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 20px;
+  padding: 10px; /* Reduced padding */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blurs the background */
   transform: translateY(100%);
   transition: transform 0.3s;
-  height: 30%; /* Adjusts the info section height within the card */
+  height: 30%; /* Adjust as needed */
+  font-size: 0.9rem; /* Smaller font size */
+  overflow-y: auto; /* Adds scroll if needed */
 }
 
 .card:hover .card-info {
