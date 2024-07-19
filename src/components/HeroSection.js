@@ -25,7 +25,7 @@ function HeroSection() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel-image"
-            src="/images/img6.jpg"
+            src="/images/img8.png"
             alt="Second slide"
           />
           <Carousel.Caption className="carousel-caption">

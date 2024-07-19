@@ -2,7 +2,7 @@
 
 /* General Navbar styling */
 .navbar {
-  background: #faf7f7;
+  background: #ffffff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -191,4 +191,5 @@
     width: 100%;
     text-align: center;
   }
+  
 }
