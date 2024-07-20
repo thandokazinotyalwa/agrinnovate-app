@@ -1,44 +1,43 @@
-/* .geospatial-data {
-    padding: 20px;
-    background-color: #eaf5e0;
-    color: #333;
-    font-family: 'PT Sans', sans-serif;
-  }
-  
-  .data-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .location-info,
-  .weather-info,
-  .recommendations-info {
-    padding: 20px;
-    background-color: #d0e9d6;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    margin-top: 0;
-    color: #2a7a2d;
-  }
-  
-  p {
-    margin: 5px 0;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    background: #c9e0c1;
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 4px;
-  }
-   */
-   
+.geospatial-data {
+  padding: 20px;
+  background-color: #eaf5e0;
+  color: #333;
+  font-family: "PT Sans", sans-serif;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location-info,
+.weather-info,
+.recommendations-info {
+  padding: 20px;
+  background-color: #d0e9d6;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #2a7a2d;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/*ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #c9e0c1;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+}
+*/

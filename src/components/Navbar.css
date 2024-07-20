@@ -157,7 +157,7 @@
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: #040404;
   }
 
   .nav-item {
@@ -181,10 +181,6 @@
     padding: 0;
     display: none;
     z-index: 1;
-  }
-
-  .nav-item:hover .dropdown-menu {
-    display: block;
   }
 
   .nav-item.active .dropdown-menu {

@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Add padding for spacing */
+  padding: 20px;
 }
 
 .heading {
@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 1200px; /* Maximum width for the container */
+  max-width: 1200px;
 }
 
 .card {
@@ -30,8 +30,8 @@
   transition: transform 0.3s;
   margin: 10px;
   position: relative;
-  flex: 1 1 calc(25% - 40px); /* Ensure the cards take up 25% of the container width with a margin */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  flex: 1 1 calc(25% - 40px);
+  box-sizing: border-box;
 }
 
 .card:hover {
@@ -49,7 +49,7 @@
 }
 
 .card-summary {
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   position: absolute;
   top: 0;
@@ -58,7 +58,7 @@
   z-index: 1;
   color: black;
   text-align: center;
-  font-size: 1.2rem; /* Adjust as needed */
+  font-size: 1.2rem;
 }
 
 .card-info {
@@ -67,16 +67,54 @@
   left: 0;
   right: 0;
   color: white;
-  padding: 10px; /* Reduced padding */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  backdrop-filter: blur(5px); /* Blurs the background */
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
   transform: translateY(100%);
   transition: transform 0.3s;
-  height: 30%; /* Adjust as needed */
-  font-size: 0.9rem; /* Smaller font size */
-  overflow-y: auto; /* Adds scroll if needed */
+  height: 30%;
+  font-size: 0.9rem;
+  overflow-y: auto;
 }
 
 .card:hover .card-info {
   transform: translateY(0);
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.33% - 40px);
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 40px);
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .card-info {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 40px);
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .card-info {
+    font-size: 0.8rem;
+  }
 }

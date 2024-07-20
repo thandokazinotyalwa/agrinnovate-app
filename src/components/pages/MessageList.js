@@ -7,7 +7,7 @@ const MessageList = ({ messages }) => {
       {messages.map((msg, index) => (
         <div key={index} className={`message message-${index % 4}`}>
           {msg}
-          <span className="emoji">😊</span>
+          <span className="emoji">MbaliNyathi🌿</span>
         </div>
       ))}
     </div>
