@@ -100,7 +100,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/signup"
+              to="/sign-up"
               className="nav-links btn--outline"
               onClick={closeMobileMenu}
             >
