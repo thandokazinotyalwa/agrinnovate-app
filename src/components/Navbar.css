@@ -35,6 +35,13 @@
 .nav-links {
   margin-right: 16px; /* Adjust margin-right to create space */
 }
+.nav-links:hover {
+  background-color: #333; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  border-radius: 4px; /* Rounded corners for a softer look */
+  padding: 5px; /* Adjust padding to increase clickable area */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+}
 
 .nav-links,
 .navbar-logo {
