@@ -1,67 +1,102 @@
 .learn-container {
-    display: flex;
-  }
-  
-  .sidebar {
-    width: 250px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-right: 1px solid #ddd;
-  }
-  
-  .sidebar h2 {
-    margin-bottom: 20px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar li button {
-    background: none;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    color: #007bff;
-  }
-  
-  .sidebar li.completed button {
-    text-decoration: line-through;
-    color: #999;
-  }
-  
-  .checkmark {
-    margin-left: 10px;
-    color: green;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .course-video {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .complete-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .complete-button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  flex-direction: row; /* Change from column to row for horizontal layout */
+  padding: 20px;
+}
+
+.page-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar li button {
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.sidebar li.completed button {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.checkmark {
+  margin-left: 10px;
+  color: green;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-container {
+  align-self: center; /* Center the video container */
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.course-video {
+  width: 100%;
+  height: auto;
+}
+
+.complete-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.complete-button:hover {
+  background-color: #0056b3;
+}
+
+.category-buttons {
+  margin-bottom: 20px;
+}
+
+.category-buttons button {
+  margin-right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.category-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}

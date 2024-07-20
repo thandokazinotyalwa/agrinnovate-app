@@ -10,6 +10,7 @@ import LogIn from "./components/pages/LogIn";
 import ChatRoom from "./components/pages/ChatRoom";
 import Courses from "./components/pages/Courses";
 import CourseDetailPage from "./components/pages/CourseDetailPage";
+// import GeospatialData from './components/GeospatialData';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/chat" element={<ChatRoom />} />
           <Route path="/agriculture-course" element={<Courses />} />
           <Route path="/course/:id" element={<CourseDetailPage />} />
+          {/* <Route path="/geospatial-data" element={<GeospatialData />} /> */}
         </Routes>
       </Router>
     </>
