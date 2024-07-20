@@ -9,12 +9,12 @@ function App() {
       summary: 'Agricultural Education, Training & Business Skills'
     },
     {
-      image: "/images/img8.png",
+      image: "/images/img-1.jpg",
       info: 'We offer advanced tools and analytics to support agricultural decision-making. Our systems help farmers optimize their operations, improve crop yields, and make informed decisions based on real-time data.',
       summary: 'Agricultural Decision Support System'
     },
     {
-      image: "/images/img1.jpg",
+      image: "/images/img6.jpg",
       info: 'We facilitate connections between local communities and agricultural experts, providing access to valuable knowledge and resources. This collaboration enhances local farming practices and fosters a supportive network for growth and innovation.',
       summary: 'Community & Expert connection'
     },
