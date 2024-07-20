@@ -85,6 +85,15 @@ function Navbar() {
             </ul>
           </li>
           <li className="nav-item">
+            <Link
+              to="/agri-assist"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Agri-Assist
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
               Log In
             </Link>
