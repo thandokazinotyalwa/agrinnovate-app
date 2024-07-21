@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
+//import { Button } from "./Button";
 import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  const [, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -55,13 +55,13 @@ function Navbar() {
               ChatRoom
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item dropdown">
             <Link
               to="/opportunities"
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Opportunities
+              Opportunities <i className="fas fa-caret-down"></i>
             </Link>
             <ul className="dropdown-menu">
               <li>
@@ -86,7 +86,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/agri-assist"
+              to="/geospatial-data"
               className="nav-links"
               onClick={closeMobileMenu}
             >
@@ -100,7 +100,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/signup"
+              to="/sign-up"
               className="nav-links btn--outline"
               onClick={closeMobileMenu}
             >

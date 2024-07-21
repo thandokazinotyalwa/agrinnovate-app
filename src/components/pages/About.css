@@ -1,44 +1,61 @@
 .about-us {
-    background-color: white;
-    text-align: center;
-    padding: 50px;
-  }
-  
+  background-color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.about-us__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Added to ensure content wraps on smaller screens */
+}
+
+.about-us__image,
+.about-us__content {
+  flex: 1;
+  max-width: 45%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px; /* Added margin to provide space between elements */
+}
+
+.about-us__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-us__content {
+  text-align: left;
+}
+
+.about-us__content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-us__content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
   .about-us__container {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
   }
-  
+
   .about-us__image,
   .about-us__content {
-    flex: 1;
-    max-width: 50%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    max-width: 100%;
   }
-  
-  .about-us__image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
+
   .about-us__content {
-    text-align: left;
+    text-align: center;
   }
-  
-  .about-us__content h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .about-us__content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
+}
