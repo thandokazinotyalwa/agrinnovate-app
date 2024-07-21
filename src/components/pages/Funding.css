@@ -1,0 +1,95 @@
+
+
+.project-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .form-section {
+    margin-top: 20px;
+  }
+  
+  .goal-reached {
+    background-color: #dff0d8;
+    padding: 20px;
+    border: 1px solid #3e8e41;
+    border-radius: 5px;
+    color: #3e8e41;
+  }
+  
+  h1 {
+    color: #3e8e41;
+  }
+  
+  strong {
+    color: #00698f;
+  }
+  
+  p {
+    color: #666; 
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="button"] {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #3e8e41;
+  }
+
+  .goal-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .goal-box, .amount-raised-box {
+    flex-basis: 45%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .goal-box h2, .amount-raised-box h2 {
+    margin-top: 0;
+  }
+
+  .goal-box p, .amount-raised-box p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e8e41;
+  }
+
