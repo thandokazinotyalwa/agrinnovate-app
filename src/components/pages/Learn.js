@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Learn.css';
 
 const courses = [
-  { id: 1, category: 'agricultural', title: 'Introduction to Farming', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Basics of farming.' },
+  { id: 1, category: 'agricultural', title: 'Introduction to Farming', videoUrl: '/video/intro-to-farming.mp4', description: 'Basics of farming.' },
   { id: 2, category: 'agricultural', title: 'Advanced Crop Management', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Techniques for managing crops.' },
   { id: 3, category: 'agricultural', title: 'Sustainable Agriculture', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Practices for sustainable farming.' },
   { id: 4, category: 'agricultural', title: 'Soil Health and Management', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'How to maintain healthy soil.' },
