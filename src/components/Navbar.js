@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-//import { Button } from "./Button";
 import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
   const [, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const toggleDropdown = () => setDropdown(!dropdown);
+  const closeDropdownMenu = () => {
+    setDropdown(false);
+    closeMobileMenu();
+  };
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -55,34 +60,37 @@ function Navbar() {
               ChatRoom
             </Link>
           </li>
-          <li className="nav-item dropdown">
-            <Link
-              to="/opportunities"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
+          <li
+            className="nav-item"
+            onMouseEnter={() => setDropdown(true)}
+            onMouseLeave={() => setDropdown(false)}
+            onClick={toggleDropdown}
+          >
+            <Link to="/opportunities" className="nav-links">
               Opportunities <i className="fas fa-caret-down"></i>
             </Link>
-            <ul className="dropdown-menu">
-              <li>
-                <Link
-                  to="/funding"
-                  className="dropdown-links"
-                  onClick={closeMobileMenu}
-                >
-                  Funding
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/job"
-                  className="dropdown-links"
-                  onClick={closeMobileMenu}
-                >
-                  Job
-                </Link>
-              </li>
-            </ul>
+            {dropdown && (
+              <ul className="dropdown-menu">
+                <li>
+                  <Link
+                    to="/funding"
+                    className="dropdown-links"
+                    onClick={closeDropdownMenu}
+                  >
+                    Funding
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/job"
+                    className="dropdown-links"
+                    onClick={closeDropdownMenu}
+                  >
+                    Job
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
           <li className="nav-item">
             <Link
