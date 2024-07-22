@@ -3,9 +3,9 @@ import './Learn.css';
 
 const courses = [
   { id: 1, category: 'agricultural', title: 'Introduction to Farming', videoUrl: '/video/intro-to-farming.mp4', description: 'Basics of farming.' },
-  { id: 2, category: 'agricultural', title: 'Advanced Crop Management', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Techniques for managing crops.' },
-  { id: 3, category: 'agricultural', title: 'Sustainable Agriculture', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Practices for sustainable farming.' },
-  { id: 4, category: 'agricultural', title: 'Soil Health and Management', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'How to maintain healthy soil.' },
+  { id: 2, category: 'agricultural', title: 'Advanced Crop Management', videoUrl: '/video/advanced crop management.mp4', description: 'Techniques for managing crops.' },
+  { id: 3, category: 'agricultural', title: 'Sustainable Agriculture', videoUrl: '/video/sustainable agriculture.mp4', description: 'Practices for sustainable farming.' },
+  { id: 4, category: 'agricultural', title: 'Soil Health and Management', videoUrl: '/video/soil health.mp4', description: 'How to maintain healthy soil.' },
   { id: 5, category: 'agricultural', title: 'Water Conservation in Agriculture', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Techniques for conserving water.' },
   { id: 6, category: 'agricultural', title: 'Integrated Pest Management', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Strategies for managing pests.' },
   { id: 7, category: 'business', title: 'Introduction to Agricultural Business', videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: 'Basics of agricultural business.' },
