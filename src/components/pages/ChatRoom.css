@@ -1,11 +1,109 @@
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chat Room Container */
 .chat-room {
   display: flex;
   flex-direction: column;
   height: 80vh;
   width: 100%;
-  max-width: 800px;
-  margin: 30px auto;
-  background: #0c5a9f;
+  max-width: 1000px;
+  background: #cbe54e;
   border-radius: 10px;
   overflow: hidden;
+}
+
+/* Navigation Menu */
+.navigation {
+  background-color: #94b447;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* User Profile Section */
+.user-profile {
+  background-color: #5d6e1e;
+  padding: 15px;
+  border-bottom: 2px solid #94b447;
+}
+
+/* Discussion Threads */
+.discussion-thread {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #cbe54e;
+  overflow-y: auto;
+}
+
+/* Messages Section */
+.message-list {
+  flex-grow: 1;
+  padding: 15px;
+  background-color: #94b447;
+  overflow-y: auto;
+}
+
+/* Input Section */
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #5d6e1e;
+}
+
+/* Buttons and Interactive Elements */
+button {
+  background-color: #94b447;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cbe54e;
+}
+
+/* Notifications */
+.notifications {
+  background-color: #5d6e1e;
+  padding: 10px;
+  border-bottom: 2px solid #94b447;
+}
+
+/* Real-Time Chat */
+.real-time-chat {
+  background-color: #cbe54e;
+  padding: 10px;
+  border-top: 2px solid #94b447;
+}
+
+/* Moderation Tools */
+.moderation-tools {
+  background-color: #5d6e1e;
+  padding: 10px;
+  border-top: 2px solid #94b447;
+}
+
+/* Engagement Tools */
+.engagement-tools {
+  background-color: #94b447;
+  padding: 10px;
+  border-top: 2px solid #cbe54e;
+}
+
+/* Content Organization */
+.content-organization {
+  background-color: #5d6e1e;
+  padding: 10px;
+  border-top: 2px solid #94b447;
 }

@@ -16,11 +16,29 @@ function LogIn() {
     }));
   };
 
+  // Modify the handleSubmit function in your LogIn component
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Login submitted", formData);
-    // Optionally, you can reset the form here if needed
+
+    fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: formData.username,
+        password: formData.password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Login successful:", data);
+      })
+      .catch((error) => {
+        console.error("Login error:", error);
+      });
+
     setFormData({
       username: "",
       password: "",

@@ -23,7 +23,27 @@ function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+
+    fetch("http://localhost:5000/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.message === "User registered successfully") {
+          console.log("Signup successful:", data);
+          // Redirect to login or another page
+        } else {
+          console.error("Signup error:", data.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Signup error:", error);
+      });
+
     setFormData({
       username: "",
       name: "",
