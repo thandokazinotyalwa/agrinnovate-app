@@ -3,7 +3,7 @@ import "./SignUp.css";
 
 function SignUp() {
   const [formData, setFormData] = useState({
-    username: "",
+    email: "",
     name: "",
     surname: "",
     phoneNumber: "",
@@ -45,7 +45,7 @@ function SignUp() {
       });
 
     setFormData({
-      username: "",
+      email: "",
       name: "",
       surname: "",
       phoneNumber: "",
@@ -56,7 +56,7 @@ function SignUp() {
 
   const handleCancel = () => {
     setFormData({
-      username: "",
+      email: "",
       name: "",
       surname: "",
       phoneNumber: "",
