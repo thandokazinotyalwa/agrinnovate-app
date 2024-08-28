@@ -80,15 +80,6 @@ function Navbar() {
                     Funding
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/job"
-                    className="dropdown-links"
-                    onClick={closeDropdownMenu}
-                  >
-                    Job
-                  </Link>
-                </li>
               </ul>
             )}
           </li>

@@ -1,36 +1,54 @@
+/* Base Styles */
 .map-container {
-  margin: 50px 50px 50px 50px;
   display: flex;
-  flex-direction: row;
-  gap: 20px; /* Adds space between the left and right columns */
+  margin: 10px;
+  gap: 30px;
+  width: 100%; /* Ensure full width */
+  height: auto; /* Allow height to adjust based on content */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .left-column,
 .right-column {
   flex: 1;
   padding: 10px;
-  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  box-sizing: border-box;
+}
+
+.left-column h2,
+.right-column h2 {
+  color: black;
+}
+
+b,
+strong {
+  color: green;
+  font-size: 20px;
 }
 
 .map {
-  height: 500px;
-  width: 100%;
+  height: 100%; /* Full height of its container */
+  width: 100%; /* Full width of its container */
+  max-height: 400px; /* Ensure map doesn’t grow too large */
+  box-sizing: border-box; /* Include padding and border in the element’s total width and height */
 }
 
 .filter-buttons {
   margin-bottom: 10px;
-  text-align: center; /* Centers the buttons horizontally */
+  text-align: center;
 }
 
 .filter-buttons button {
-  margin-right: 5px;
+  margin: 5px;
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
-  border: none; /* Remove default border */
+  border: none;
   border-radius: 5px;
-  color: #fff; /* Text color */
-  transition: background-color 0.3s ease; /* Smooth color transition */
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
 .filter-buttons .btn-primary {
@@ -54,37 +72,38 @@
 }
 
 .filter-buttons button:hover {
-  opacity: 0.9; /* Slightly darker on hover for better visual feedback */
+  opacity: 0.9;
 }
 
 .right-column {
-  padding-left: 30px; /* Adds space between the columns */
+  padding-left: 30px;
 }
 
 .right-column h2 {
-  font-size: 30px; /* Adjust the font size for the heading */
+  font-size: 30px;
   margin-top: 15px;
-  margin-bottom: 5px; /* Adds space between the heading and the content */
-  text-align: center;
+  margin-bottom: 5px;
 }
 
 .right-column ul {
   list-style: none;
-  padding: 80px;
+  padding: 80px 30px 70px 10px;
 }
 
 .right-column li {
-  margin-bottom: 20px; /* Adds space between list items */
+  margin-bottom: 20px;
 }
 
 .right-column p {
-  font-size: 16px; /* Adjust font size for the summary text */
-  margin: 0; /* Removes default margin */
+  font-size: 16px;
+  margin: 0;
 }
+
 .left-column h2 {
   font-size: 40px;
   margin-bottom: 10px;
 }
+
 .left-column p {
   margin-bottom: 10px;
 }
@@ -92,7 +111,7 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .map-container {
-    flex-direction: column; /* Stack columns vertically on tablets */
+    flex-direction: column;
     gap: 10px;
   }
 
@@ -102,7 +121,7 @@
   }
 
   .map {
-    height: 400px; /* Adjust map height for smaller screens */
+    height: 200px;
   }
 
   .filter-buttons {
@@ -110,7 +129,6 @@
   }
 
   .filter-buttons button {
-    margin-right: 5px;
     font-size: 12px;
   }
 
@@ -127,9 +145,11 @@
 
 @media (max-width: 768px) {
   .map-container {
-    margin: 20px; /* Reduce margin on mobile */
-    flex-direction: column; /* Stack columns vertically on mobile */
-    gap: 20px;
+    margin: 0px;
+    flex-direction: column;
+  }
+  .left-column h2 {
+    font-size: 24px;
   }
 
   .left-column,
@@ -138,7 +158,7 @@
   }
 
   .map {
-    height: 300px; /* Adjust map height for mobile screens */
+    height: 300px;
   }
 
   .filter-buttons {
@@ -146,9 +166,8 @@
   }
 
   .filter-buttons button {
-    margin-right: 5px;
     font-size: 12px;
-    padding: 8px 16px;
+    padding: 6px 10px;
   }
 
   .right-column h2 {

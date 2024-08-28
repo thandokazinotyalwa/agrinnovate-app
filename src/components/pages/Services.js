@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Link } from "react-router-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Services.css";
@@ -133,8 +134,12 @@ const Services = () => {
                   <b>{opportunity.title}</b>
                   <br />
                   <span>{opportunity.city}</span>
+
                   <br />
                   <p>{opportunity.summary}</p>
+                  <Link to={`/job/${opportunity.id}`} className="btn btn-info">
+                    View Opportunity
+                  </Link>
                 </Popup>
               </Marker>
             ))}
@@ -145,7 +150,8 @@ const Services = () => {
           <ul>
             {filteredOpportunities.map((opportunity) => (
               <li key={opportunity.id}>
-                <b>{opportunity.title}</b> - {opportunity.city}
+                <b>{opportunity.title}</b>
+                <b> - {opportunity.city}</b>
                 <p>{opportunity.summary}</p>
               </li>
             ))}

@@ -12,6 +12,7 @@ import Courses from "./components/pages/Courses";
 import CourseDetailPage from "./components/pages/CourseDetailPage";
 import GeospatialData from "./components/pages/GeospatialData";
 import Funding from "./components/pages/Funding";
+import Job from "./components/pages/Job";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/opportunities" element={<Services />} />
+          <Route path="/job" element={<Job />} />
+          <Route path="/job/:id" element={<Job />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/chat" element={<ChatRoom />} />
