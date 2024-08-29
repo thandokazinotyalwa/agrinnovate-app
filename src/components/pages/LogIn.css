@@ -1,54 +1,89 @@
-/* loginForm.css */
-.login-form-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-color: #f9f9f9;
+  padding: 20px;
 }
 
-.login-form-header {
-  font-size: 24px;
-  margin-bottom: 20px;
+.login-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h2 {
   text-align: center;
-  color: #2a7a2d;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
 }
 
-.login-form-group {
+.login-form .form-group {
   margin-bottom: 15px;
 }
 
-.login-form-group label {
+.login-form label {
   display: block;
   margin-bottom: 5px;
-  font-size: 14px;
+  color: #333;
 }
 
-.login-form-group input {
+.login-form input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.login-submit-btn {
-  padding: 10px 20px;
-  background-color: #2a7a2d;
-  color: #fff;
+.login-form .form-group .btn-login {
+  width: 100%;
+  padding: 12px;
   border: none;
   border-radius: 4px;
   font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
   cursor: pointer;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
-  transition: background-color 0.3s;
-  display: block;
-  margin: 20px auto 0;
 }
 
-.login-submit-btn:hover {
-  background-color: #1e5a1e;
+.login-form .form-group .btn-login:hover {
+  background-color: #218838;
+}
+
+.login-form .form-group .forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form .form-group .forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-form .form-group .btn-signup {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form .form-group .btn-signup:hover {
+  background-color: #007bff;
+  color: #fff;
 }
