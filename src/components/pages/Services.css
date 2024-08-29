@@ -1,13 +1,14 @@
 /* Base Styles */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
 .map-container {
   display: flex;
-  margin: 10px;
-  gap: 30px;
-  width: 100%; /* Ensure full width */
-  height: auto; /* Allow height to adjust based on content */
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  width: 100%;
 }
 
 .left-column,
@@ -29,10 +30,9 @@ strong {
 }
 
 .map {
-  height: 100%; /* Full height of its container */
-  width: 100%; /* Full width of its container */
-  max-height: 400px; /* Ensure map doesn’t grow too large */
-  box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+  height: 500px; /* Fixed height */
+  width: 100%; /* Full width of the column */
+  border: 1px solid #ddd;
 }
 
 .filter-buttons {
