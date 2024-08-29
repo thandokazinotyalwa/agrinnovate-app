@@ -1,10 +1,10 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Job.css";
 
-// This should ideally come from a higher level component or context
+// This should ideally come from a higher-level component or context
 const opportunities = [
   {
     id: 1,
@@ -59,7 +59,7 @@ const opportunities = [
     description: "This is a detailed description of the farm opportunity...",
     requirements: "Applicants must have basic knowledge of farming.",
     applicationDeadline: "2024-09-30",
-    contact: "For more information contact: mbalinyathi@gmail.com",
+    contact: "mbalinyathi@gmail.com",
   },
 ];
 
@@ -72,13 +72,10 @@ const Job = () => {
   if (!opportunity) {
     return (
       <div>
-        Farm Opportunity - Cape Town A great opportunity to work on a local farm
-        and learn new skills. Training Event - Durban Join us for a
-        comprehensive training session on sustainable farming practices.
-        Agriculture Fair - Johannesburg Explore the latest trends in agriculture
-        at this year's fair. Workshop on Sustainable Farming - Pretoria
-        Participate in a hands-on workshop focused on sustainable farming
-        techniques.
+        <h2>No opportunity found.</h2>
+        <Link to="/opportunities" className="btn btn-success">
+          Back to Services
+        </Link>
       </div>
     );
   }
@@ -97,6 +94,150 @@ const Job = () => {
           <Link to="/opportunities" className="btn btn-success">
             Back to Services
           </Link>
+        </div>
+      </div>
+
+      {/* Comments Section */}
+      <CommentSection />
+    </div>
+  );
+};
+
+const CommentSection = () => {
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    loadComments();
+  }, []);
+
+  const loadComments = async () => {
+    try {
+      const response = await axios.get("fetch_comments.php");
+      setComments(response.data);
+    } catch (error) {
+      console.error("Error fetching comments:", error);
+    }
+  };
+
+  const handleLike = async (commentId) => {
+    try {
+      await axios.post("like_dislike.php", `action=like&id=${commentId}`);
+      loadComments();
+    } catch (error) {
+      console.error("Error liking comment:", error);
+    }
+  };
+
+  const handleDislike = async (commentId) => {
+    try {
+      await axios.post("like_dislike.php", `action=dislike&id=${commentId}`);
+      loadComments();
+    } catch (error) {
+      console.error("Error disliking comment:", error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Handle comment submission here
+  };
+
+  return (
+    <div className="comment-container">
+      <h1>Comments</h1>
+      <div id="comments-section">
+        {comments.map((comment) => (
+          <div className="comment-box" key={comment.id}>
+            <div className="comment-header">
+              <span className="comment-username">{comment.username}</span>
+              <span className="comment-date">{comment.date}</span>
+            </div>
+            <div className="comment-content">{comment.content}</div>
+            <div className="comment-actions">
+              <button
+                className="like-btn"
+                onClick={() => handleLike(comment.id)}
+              >
+                <i className="fas fa-thumbs-up"></i> Liked ({comment.likes})
+              </button>
+              <button
+                className="dislike-btn"
+                onClick={() => handleDislike(comment.id)}
+              >
+                <i className="fas fa-thumbs-down"></i> Disliked (
+                {comment.dislikes})
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="row mb-5">
+        <div className="col mb-3">
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3 form-check">
+              <p>
+                <label htmlFor="w3review">Submit your comments online:</label>
+              </p>
+              <textarea
+                id="w3review"
+                name="w3review"
+                rows="4"
+                cols="50"
+                placeholder="Add a comment"
+                required
+              ></textarea>
+              <br />
+              <input
+                type="submit"
+                value="Submit"
+                className="btn btn-branding"
+              />
+            </div>
+          </form>
+        </div>
+        <div className="col social-links">
+          <p>You can share on the platforms below:</p>
+          <a
+            href="mailto:open.innovation@capetown.gov.za"
+            target="_blank"
+            rel="noreferrer"
+            title="Email Profile"
+          >
+            <i className="fa-solid fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.capetown.gov.za/linkedin"
+            target="_blank"
+            rel="noreferrer"
+            title="LinkedIn Profile"
+          >
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/CityofCT/"
+            target="_blank"
+            rel="noreferrer"
+            title="Facebook Profile"
+          >
+            <i className="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://twitter.com/CityofCT"
+            target="_blank"
+            rel="noreferrer"
+            title="Twitter Profile"
+          >
+            <i className="fa-brands fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/cityofct"
+            target="_blank"
+            rel="noreferrer"
+            title="Instagram Profile"
+          >
+            <i className="fa-brands fa-instagram"></i>
+          </a>
         </div>
       </div>
     </div>
