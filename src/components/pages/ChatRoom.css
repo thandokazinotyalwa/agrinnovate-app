@@ -47,7 +47,7 @@
 }
 
 form {
-  display: flex;
+  /*display: flex;*/
   justify-content: space-between;
   position: sticky;
   bottom: 0;
@@ -66,7 +66,7 @@ form input {
 
 form button {
   padding: 5px 10px;
-  width: 90px; /* Fixed width for the button */
+  /*width: 90px;*/ /* Fixed width for the button */
   border: none;
   background-color: #5d6e1e;
   color: white;
