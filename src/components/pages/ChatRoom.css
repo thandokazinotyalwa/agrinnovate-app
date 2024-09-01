@@ -1,60 +1,11 @@
 .chat-room {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-.search-form,
-.ask-form,
-.message-form {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.search-bar,
-.ask-bar,
-.message-bar {
-  flex: 1;
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.search-button,
-.ask-button,
-.send-button {
-  padding: 10px 20px;
-  background-color: #5d6e1e;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.search-button,
-.ask-button,
-.send-button {
-  width: 90px;
-}
-
-.question-list,
-.message-list {
-  margin-bottom: 20px;
-}
-
-.question,
-.message {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-}
-
-.user-info {
-  margin-bottom: 5px;
-  font-size: 0.9em;
-  color: #333;
-}
-
-.answers {
-  margin-top: 10px;
+  background: #f0f8ff;
+  border-radius: 10px;
+  overflow: hidden;
 }
