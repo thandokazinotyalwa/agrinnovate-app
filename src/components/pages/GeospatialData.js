@@ -352,19 +352,19 @@ function GeospatialData() {
               value={JSON.stringify(
                 {
                   Temperature: weatherConditions.temperature
-                    ? `${weatherConditions.temperature} °C`
+                    ? `${Math.round(weatherConditions.temperature)} °C`
                     : "",
                   Wind: weatherConditions.wind
-                    ? `${weatherConditions.wind} m/s`
+                    ? `${Math.round(weatherConditions.wind)} m/s`
                     : "",
                   Rain: weatherConditions.rain
-                    ? `${weatherConditions.rain} mm`
+                    ? `${Math.round(weatherConditions.rain)} mm`
                     : "",
                   Pressure: weatherConditions.pressure
-                    ? `${weatherConditions.pressure} hPa`
+                    ? `${Math.round(weatherConditions.pressure)} hPa`
                     : "",
                   Humidity: weatherConditions.humidity
-                    ? `${weatherConditions.humidity} %`
+                    ? `${Math.round(weatherConditions.humidity)} %`
                     : "",
                 },
                 null,

@@ -2,104 +2,27 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Take up full viewport height */
-}
-
-.search-bar {
-  width: 50%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  float: left;
-}
-
-.question-list {
-  margin-bottom: 20px;
-  flex: 1; /* Allow question list to take up available space */
-  overflow-y: auto;
-}
-
-.question {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-.answers {
-  margin-top: 10px;
-  padding-left: 10px;
-  border-left: 2px solid #ccc;
-}
-
-.answer {
-  margin-bottom: 5px;
-  background-color: #f9f9f9;
-  padding: 5px;
-  border-radius: 4px;
-}
-
-form {
-  /*display: flex;*/
-  justify-content: space-between;
-  position: sticky;
-  bottom: 0;
-  background-color: #f4f4f4;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-}
-
-form input {
-  width: calc(100% - 100px); /* Adjusted width */
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-form button {
-  padding: 5px 10px;
-  /*width: 90px;*/ /* Fixed width for the button */
-  border: none;
-  background-color: #5d6e1e;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #94b447;
-}
-
-.chat-room {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 .search-form,
-.ask-form {
+.ask-form,
+.message-form {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
 .search-bar,
-.ask-bar {
+.ask-bar,
+.message-bar {
   flex: 1;
   padding: 10px;
   margin-right: 10px;
 }
 
 .search-button,
-.ask-button {
+.ask-button,
+.send-button {
   padding: 10px 20px;
   background-color: #5d6e1e;
   color: white;
@@ -108,15 +31,18 @@ form button:hover {
 }
 
 .search-button,
-.ask-button {
-  width: 90px; /* Ensures both buttons are the same size */
+.ask-button,
+.send-button {
+  width: 90px;
 }
 
-.question-list {
+.question-list,
+.message-list {
   margin-bottom: 20px;
 }
 
-.question {
+.question,
+.message {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;

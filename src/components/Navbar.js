@@ -51,13 +51,12 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/learn" className="nav-links" onClick={closeMobileMenu}>
-              Learn
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
-              ChatRoom
+            <Link
+              to="/geospatial-data"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Agri-Assist
             </Link>
           </li>
           <li
@@ -84,14 +83,16 @@ function Navbar() {
             )}
           </li>
           <li className="nav-item">
-            <Link
-              to="/geospatial-data"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              Agri-Assist
+            <Link to="/learn" className="nav-links" onClick={closeMobileMenu}>
+              Learn
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/chat" className="nav-links" onClick={closeMobileMenu}>
+              ChatRoom
+            </Link>
+          </li>
+
           <li className="nav-item">
             <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
               Log In

@@ -41,6 +41,14 @@
   color: #007bff;
 }
 
+.sidebar li.completed {
+  background-color: #ffffff; /* Set the background to white */
+  color: #007bff; /* Maintain text color for contrast */
+  border: 1px solid #ddd; /* Add a light border for definition */
+  border-radius: 5px; /* Optional: add some border radius */
+  padding: 10px; /* Add padding for better spacing */
+}
+
 .sidebar li.completed button {
   text-decoration: line-through;
   color: #999;
